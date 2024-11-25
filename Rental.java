@@ -1,4 +1,3 @@
-package AulaPraticaRefactoring;
 public class Rental {
 
     private Movie _movie;
