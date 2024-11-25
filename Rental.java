@@ -37,4 +37,13 @@ public class Rental {
       }
       return thisAmount;
    }
+
+   // Extracted method for calculating frequent renter points
+   public int getFrequentRenterPoints() {
+      int points = 1; // Default points for regular rentals
+      if (_movie.getPriceCode() == Movie.NEW_RELEASE && _daysRented > 1) {
+         points = 2; // Bonus for new release rentals with more than 1 day
+      }
+      return points;
+   }
 }
