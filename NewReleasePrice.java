@@ -4,8 +4,10 @@ public class NewReleasePrice extends Price {
         return daysRented * 3;
     }
 
+    // Versão especializada para filmes de lançamento
     @Override
     public int getFrequentRenterPoints(int daysRented) {
-        return (daysRented > 1) ? 2 : 1; // Filmes de lançamento dão 2 pontos por locação se alugados por mais de 1 dia
+        // Filmes de lançamento dão 2 pontos se alugados por mais de 1 dia, senão 1 ponto
+        return (daysRented > 1) ? 2 : 1;
     }
 }

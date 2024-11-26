@@ -7,8 +7,9 @@ public class RegularPrice extends Price {
         return result;
     }
 
+    // Usa o método genérico herdado de Price
     @Override
     public int getFrequentRenterPoints(int daysRented) {
-        return 1; // Filmes regulares sempre dão 1 ponto
+        return super.getFrequentRenterPoints(daysRented);  // Retorna 1 ponto
     }
 }
