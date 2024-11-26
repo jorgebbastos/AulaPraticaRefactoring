@@ -11,25 +11,15 @@ public class Movie {
        _priceCode = priceCode;
    }
 
-   public double getCharge(int daysRented) {
-       double result = 0;
-       switch (_priceCode) {
-           case REGULAR:
-               result += 2;
-               if (daysRented > 2) {
-                   result += (daysRented - 2) * 1.5;
-               }
-               break;
-           case NEW_RELEASE:
-               result += daysRented * 3;
-               break;
-           case CHILDRENS:
-               result += 1.5;
-               if (daysRented > 3) {
-                   result += (daysRented - 3) * 1.5;
-               }
-               break;
+   // Método para calcular pontos de locação
+   public int getFrequentRenterPoints(int daysRented) {
+       int result = 1; // Ponto padrão
+
+       // Se for um novo lançamento e o aluguel for por mais de um dia, dá um bônus
+       if (_priceCode == NEW_RELEASE && daysRented > 1) {
+           result++;  // Bônus para filmes novos com mais de 1 dia
        }
+
        return result;
    }
 }

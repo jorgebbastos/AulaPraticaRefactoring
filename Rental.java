@@ -7,7 +7,7 @@ public class Rental {
        _daysRented = daysRented;
    }
 
-   public double getCharge() {
-       return _movie.getCharge(_daysRented); // Delegação para a classe Movie
+   public int getFrequentRenterPoints() {
+       return _movie.getFrequentRenterPoints(_daysRented); // Delegação para a classe Movie
    }
 }
