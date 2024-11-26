@@ -10,4 +10,14 @@ public class Rental {
    public int getFrequentRenterPoints() {
        return _movie.getFrequentRenterPoints(_daysRented); // Delegação para a classe Movie
    }
+
+public Object getMovie() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getMovie'");
+}
+
+public char[] getCharge() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getCharge'");
+}
 }
