@@ -1,10 +1,14 @@
 public class RegularPrice extends Price {
     @Override
     public double getCharge(int daysRented) {
-        double result = 2; // Preço base para filmes regulares
-        if (daysRented > 2) {
-            result += (daysRented - 2) * 1.5; // Adiciona um valor extra para dias além de 2
-        }
-        return result; // Retorna o valor final da cobrança
+        double result = 2;
+        if (daysRented > 2)
+            result += (daysRented - 2) * 1.5;
+        return result;
+    }
+
+    @Override
+    public int getFrequentRenterPoints(int daysRented) {
+        return 1; // Filmes regulares sempre dão 1 ponto
     }
 }
